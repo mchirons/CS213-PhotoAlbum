@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserViewController">
+   <children>
+      <ScrollPane hbarPolicy="NEVER" layoutX="50.0" layoutY="75.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="75.0">
+         <content>
+            <TilePane fx:id="tilePane" prefHeight="640.0" prefWidth="909.0">
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </TilePane>
+         </content>
+      </ScrollPane>
+      <Label layoutX="470.0" layoutY="34.0" prefHeight="41.0" prefWidth="84.0" text="Albums">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <MenuBar layoutY="2.0">
+        <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem fx:id="logout" mnemonicParsing="false" onAction="#handleLogoutClick" text="Logout" />
+                  <MenuItem fx:id="close" mnemonicParsing="false" onAction="#handleCloseClick" text="Close" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+                  <MenuItem fx:id="createNewAlbum" mnemonicParsing="false" onAction="#handleCreateNewAlbumClick" text="Create New Album" />
+                  <MenuItem fx:id="renameSelectedAlbum" mnemonicParsing="false" onAction="#handleRenameSelectedAlbumClick" text="Rename Selected Album" />
+                  <MenuItem fx:id="deleteSelectedAlbum" mnemonicParsing="false" onAction="#handleDeleteSelectedAlbumClick" text="Delete Selected Album" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Search">
+            <items>
+              <MenuItem fx:id="photoSearch" mnemonicParsing="false" onAction="#handlePhotoSearchClick" text="Photo Search" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fx:id="loading" fitHeight="32.0" fitWidth="32.0" layoutX="942.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

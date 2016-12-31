@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="306.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EditPhotoViewController">
+  <tabs>
+    <Tab text="Add/Delete Tags">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="listView" layoutX="43.0" layoutY="104.0" prefHeight="135.0" prefWidth="306.0" />
+                  <Button fx:id="deleteSelected" layoutX="370.0" layoutY="104.0" mnemonicParsing="false" onAction="#handleDeleteSelectedClick" text="Delete Selected" />
+                  <Label layoutX="43.0" layoutY="77.0" text="Tags">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ButtonBar layoutX="386.0" layoutY="237.0" prefHeight="40.0" prefWidth="200.0">
+                    <buttons>
+                        <Button fx:id="close2" layoutX="135.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleCloseClick" text="Close" />
+                    </buttons>
+                  </ButtonBar>
+                  <ComboBox fx:id="comboBox" layoutX="43.0" layoutY="36.0" prefHeight="25.0" prefWidth="115.0" promptText="Choose One" />
+                  <Label layoutX="88.0" layoutY="14.0" text="Type" />
+                  <TextField fx:id="values" layoutX="172.0" layoutY="36.0" prefHeight="25.0" prefWidth="315.0" />
+                  <Button fx:id="add1" layoutX="497.0" layoutY="36.0" mnemonicParsing="false" onAction="#handleAdd1Click" text="Add" />
+                  <Label layoutX="172.0" layoutY="14.0" text="Values must be one word and separated by spaces" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Add/Change Caption">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="caption" layoutX="100.0" layoutY="126.0" prefHeight="25.0" prefWidth="398.0" />
+                  <Label layoutX="14.0" layoutY="125.0" text="Caption">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="add2" layoutX="529.0" layoutY="126.0" mnemonicParsing="false" onAction="#handleAdd2Click" prefHeight="27.0" prefWidth="43.0" text="Add" />
+                  <ButtonBar layoutX="386.0" layoutY="237.0" prefHeight="40.0" prefWidth="200.0">
+                     <buttons>
+                        <Button fx:id="close3" layoutX="135.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleCloseClick" text="Close" />
+                     </buttons>
+                  </ButtonBar>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
